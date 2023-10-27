@@ -250,3 +250,79 @@ for(let i = 0; i < 100; i++) {
         continue;
     }
 }
+
+// 8 googlatkaa tai keksikää miten tyhjennetään lista
+// yksi tapa on yksinkertaisesti
+console.log("Tehtävä 8");
+console.log("------------------");
+let listEm = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(listEm);
+listEm = [];
+console.log(listEm);
+// tässä tapauksessa listEm osoite muuttuu tyhjään listaan. 
+// eli alkuperäiseen listaan ei ole enään viittausta
+// tyhjennä lista niin että alkuperäinen osoite tyhjennetään eikä vaihdeta osoitetta tyhjään
+
+let list8 = [1, 2 , 3, 4, 5];
+console.log(list8);
+list8.length = 0;
+console.log(list8);
+
+// 9. Tutkikaa vähän spread operaattoria googlaamalla
+// Tehkää ohjelma jossa on kaksi listaa [1,2,3,4,5] ja [6,7,8,9,10]
+// yhdistäkää ne käyttämällä spread operaattoria ja laittakaa väliin 2 elementtiä
+// "text1" ja "text2" 
+// niin että lopputulos on [1,2,3,4,5,"text1","text2",6,7,8,9,10]
+
+console.log("Tehtävä 9");
+console.log("------------------");
+
+let lista1tehtävä9 = [1,2,3,4,5];
+let lista2tehtävä9 = [6,7,8,9,10];
+let lista3tehtävä9 = [...lista1tehtävä9, "text1", "text2", ...lista2tehtävä9];
+//lista3tehtävä9.splice( 5, 0, "text1");
+//lista3tehtävä9.splice( 6, 0, "text2");
+console.log(lista3tehtävä9);
+
+// 10. Tee funktio joka saa parametreiksi listan ja laskee sen elementtien summan
+// Tässä tarvitaan listan reduce-funktiota. 
+
+console.log("Tehtävä 10");
+console.log("------------------");
+let lista1tehtävä10 = [1,2,3];
+function funktiotehtävä10(listaP){
+
+    let summatehtävä10 = lista1tehtävä10.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue
+    },0);
+
+    console.log(summatehtävä10);
+}
+
+funktiotehtävä10(lista1tehtävä10);
+
+// 11. Tee luokka Cat, jonka attribuutit ovat name, age, owner.
+// Luokassa on metodi getInfo(), joka palauttaa stringin
+// ""Name: <name>, age: <age>, owner: <owner>""
+console.log("Tehtävä 11");
+console.log("------------------");
+
+
+class Cat {
+    constructor(name,age,owner) {
+        this.name = name;
+        this.age = age;
+        this.owner = owner;
+    }
+    getInfo() {
+        const name = this.name;
+        const age = this.age;
+        const owner = this.owner;
+        return "Name: " + name + " Age: " + age + " Owner: " + owner;
+    }
+
+
+};
+
+const Cat1 = new Cat("Kissa", 10, "Juno");
+console.log(Cat1.getInfo());
