@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h2>Ohjeita</h2>
+    <h2 id="instructions">Ohjeita</h2>
     <p>
       Kloonatkaa github repository
       <b>https://github.com/joninordlund/teaching</b> johonkin kansioon. Sitten
@@ -50,6 +50,36 @@
       "mousemove"-eventListener body-tagiin ja tulostakaa hiiren x ja y
       -koordinaatit konsoliin.
     </p>
+    <h2>Tehtävä 4.</h2>
+    <p>Tehkää alla oleviin div tageihin 'click' eventHandlerit, joissa tekstin väri vaihtuu
+      -> "red" kun tekstiä klikkaa. Tageissa on kaikissa sama class name.
+    </p>
+    <div class="teksti">Hauki</div>
+    <div class="teksti">Silakka</div>
+    <div class="teksti">Ahven</div>
+    <p>eventhandlerin funktiossa mukana tuleva parametri event sisältää propertyn 'target', 
+      joka viittaa siihen elementtiin josta event tuli. esim function f(event) {
+       event.target.style.background = "blue"}, jossa elemetin
+       josta event tuli taustaväri vaihtuu. Avainsanat getElementsByClassName 
+       (palauttaa listan elementeistä joilla on kyseinen class ).
+       Käykää lista läpi for-silmukalla ja laittakaa jokaiseen elementtiin eventHandler.
+       eventHandlerin funktiossa pitää olla event parametri
+      </p>
+
+
+      <h2>Tehtävä 5</h2>
+      <p> Lisätkää alla olevaan listaan seuraavat eläimet: 
+        hirvi, karhu, orava, käärme, apina, norsu, hämähäkki.
+      </p>
+      <ol id = "moi">
+        <li>
+            Siili
+        </li>
+      </ol>
+      <p>Tehkää eläimistä ensin array. Sitten käykää se for tai forEach silmukalla läpi ja
+      lisätkää ol tagiin li-tag jokaista eläintä kohti. Lisätkää eläimen nimi listaan
+      käyttämällä innerHTML:ää
+      Avainsanat: createElement, appendChild ja innerHTML</p>
   </body>
   <script src="script.js"></script>
 </html>
